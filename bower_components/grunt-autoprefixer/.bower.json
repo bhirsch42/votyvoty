@@ -1,0 +1,15 @@
+{
+  "name": "grunt-autoprefixer",
+  "homepage": "https://github.com/nDmitry/grunt-autoprefixer",
+  "version": "2.2.0",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.0",
+    "commit": "039d33f1216ea95fbc9e7fc9481850a14aa89e30"
+  },
+  "_source": "git://github.com/nDmitry/grunt-autoprefixer.git",
+  "_target": "~2.2.0",
+  "_originalSource": "grunt-autoprefixer",
+  "_direct": true
+}
