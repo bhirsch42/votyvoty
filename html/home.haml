@@ -5,14 +5,48 @@
     %link{rel: "stylesheet", type: "text/css", href: "../css/style.css"}
     %link{rel: "stylesheet", type: "text/css", href: "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"}
     %link{rel: "stylesheet", type: "text/css", href: "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"}
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
     %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
     %script{src: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
-    / %script{src: "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"}
     %script{src: "../js/scripts.js"}
 
 
   %body
-    #home
-      %h1 VotyVoty
+    #home.hidden
+      %h1 Voty
       %button.btn.btn-default.btn-lg Make a new Voty
-      %a#what-is-voty What is voty?
+      %a#what-is-voty{'data-toggle' => 'modal', 'data-target' => '#what-is-voty-modal'} What's a Voty?
+
+    #voty
+      #topbar
+        %h3 Voty
+      #sidebar
+        .topbar-mimic
+        %button#sidebar-toggle.btn.btn-default
+          %i.fa.fa-bars
+        .sidebar-content
+          %h3.text-center Options
+          %input.form-control{type: 'text', placeholder: 'Custom URL...'}
+          %button.btn.btn-warning#editor Anyone can add options
+          %button.btn.btn-warning#editor Can only pick one
+          %h3.text-center Show
+          %button.btn.btn-info Ballot
+          %button.btn.btn-default Results
+
+      #ballot
+        %form#create-option.option
+          %input#new-option-text{type: 'text', placeholder: "New Option..."}
+          %input.hidden{type: 'submit'}
+
+
+  / What is Voty?
+  #what-is-voty-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} X
+          %h4#myModalLabel.modal-title What's a Voty?
+        .modal-body
+          A Voty is an online ballot.  They have many options to help make any quick decision.

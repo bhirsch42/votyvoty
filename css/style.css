@@ -23,3 +23,132 @@
     font-size: 5em; }
   #home button {
     margin: 50px; }
+
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-bottom: 1px solid lightgray; }
+  #topbar h3 {
+    margin: 0; }
+
+#ballot {
+  margin-top: 50px;
+  margin-left: 50px; }
+
+#sidebar {
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  padding-top: 50px; }
+  #sidebar.open {
+    opacity: 1;
+    border-right: 1px solid lightgray;
+    left: 0px;
+    box-shadow: 0px 0px 5px black; }
+    #sidebar.open .topbar-mimic {
+      border-bottom: 1px solid white; }
+    #sidebar.open .sidebar-content {
+      opacity: 1; }
+
+.sidebar-content {
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  .sidebar-content .btn, .sidebar-content input {
+    margin: 0 15px 15px 15px; }
+  .sidebar-content input {
+    height: 30px;
+    width: auto; }
+
+.topbar-mimic {
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid lightgray; }
+
+#sidebar-toggle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  padding: 0px;
+  border-color: white; }
+
+#ballot {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 15px; }
+
+#create-option input[type=text], #create-option textarea {
+  text-align: center;
+  outline: none;
+  border: none; }
+#create-option input[type=text]:focus, #create-option textarea:focus {
+  box-shadow: none;
+  border: none; }
+
+.option {
+  font-size: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+  margin: 15px; }

@@ -5,16 +5,59 @@
     <link href='../css/style.css' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
     <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-    <!-- %script{src: "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"} -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
     <script src='../js/scripts.js'></script>
   </head>
   <body>
-    <div id='home'>
-      <h1>VotyVoty</h1>
+    <div class='hidden' id='home'>
+      <h1>Voty</h1>
       <button class='btn btn-default btn-lg'>Make a new Voty</button>
-      <a id='what-is-voty'>What is voty?</a>
+      <a data-target='#what-is-voty-modal' data-toggle='modal' id='what-is-voty'>What's a Voty?</a>
+    </div>
+    <div id='voty'>
+      <div id='topbar'>
+        <h3>Voty</h3>
+      </div>
+      <div id='sidebar'>
+        <div class='topbar-mimic'></div>
+        <button class='btn btn-default' id='sidebar-toggle'>
+          <i class='fa fa-bars'></i>
+        </button>
+        <div class='sidebar-content'>
+          <h3 class='text-center'>Options</h3>
+          <input class='form-control' placeholder='Custom URL...' type='text'>
+          <button class='btn btn-warning' id='editor'>Anyone can add options</button>
+          <button class='btn btn-warning' id='editor'>Can only pick one</button>
+          <h3 class='text-center'>Show</h3>
+          <button class='btn btn-info'>Ballot</button>
+          <button class='btn btn-default'>Results</button>
+        </div>
+      </div>
+      <div id='ballot'>
+        <form class='option' id='create-option'>
+          <input id='new-option-text' placeholder='New Option...' type='text'>
+          <input class='hidden' type='submit'>
+        </form>
+      </div>
     </div>
   </body>
+  <!-- What is Voty? -->
+  <div aria-hidden='true' aria-labelledby='myModalLabel' class='modal fade' id='what-is-voty-modal' role='dialog' tabindex='-1'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+            <span aria-hidden='true'>X</span>
+          </button>
+          <h4 class='modal-title' id='myModalLabel'>What's a Voty?</h4>
+        </div>
+        <div class='modal-body'>
+          A Voty is an online ballot.  They have many options to help make any quick decision.
+        </div>
+      </div>
+    </div>
+  </div>
 </html>
