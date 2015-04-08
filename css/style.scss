@@ -34,38 +34,28 @@
 
 #ballot {
   margin-top: 50px;
-  margin-left: 50px;
 }
 
 #sidebar {
   transition: all .5s ease;
   position: fixed;
   top: 0;
-  left: -200px;
+  left: -250px;
   width: 250px;
   height: 100%;
   background-color: white;
   padding-top: 50px;
 
+  border-right: 1px solid lightgray;
+  box-shadow: 0px 0px 5px black;
+
   &.open {
-    opacity: 1;
-    border-right: 1px solid lightgray;
-    left: 0px;
-    box-shadow: 0px 0px 5px black;
-
-    .topbar-mimic {
-      border-bottom: 1px solid white;
-    }
-
-    .sidebar-content {
-      opacity: 1;
-    }
+    left: 0;
   }
+
 }
 
 .sidebar-content {
-  transition: all .5s ease;
-  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -80,26 +70,21 @@
 
 }
 
-.topbar-mimic {
-  transition: all .5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid lightgray;
-}
-
 #sidebar-toggle {
-  position: absolute;
+  transition: all .5s ease;
+  position: fixed;
   top: 0px;
-  right: 0px;
+  left: 0px;
   margin: 5px;
   width: 40px;
   height: 40px;
   font-size: 24px;
   padding: 0px;
   border-color: white;
+  z-index: 9999;
+  &.open {
+    left: 200px;
+  }
 }
 
 #ballot {
@@ -122,7 +107,6 @@
 }
 
 .option {
-  font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +115,9 @@
   width: 200px;
   height: 150px;
   margin: 15px;
+  text-align: center;
+  max-width: 35vw;
+  max-height: 35vw;
 
 }
 
