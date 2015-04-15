@@ -111,6 +111,11 @@
           flex-wrap: wrap;
   padding: 15px; }
 
+#results {
+  margin-top: 50px;
+  padding: 15px;
+  display: none; }
+
 #create-option input[type=text], #create-option textarea {
   text-align: center;
   outline: none;
@@ -140,3 +145,5 @@
   text-align: center;
   max-width: 35vw;
   max-height: 35vw; }
+  .option.selected {
+    background-color: lime; }

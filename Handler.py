@@ -6,7 +6,6 @@ import time
 # import Database
 import hmac
 # import Secret
-from google.appengine.ext import ndb
 
 
 class Handler(webapp2.RequestHandler):

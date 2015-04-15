@@ -15,12 +15,12 @@
 
 
   %body
-    #home.view.hidden
+    #home.view
       %h1 Voty
       %button.btn.btn-default.btn-lg#new-voty Make a new Voty
       / %a#what-is-voty{'data-toggle' => 'modal', 'data-target' => '#what-is-voty-modal'} What's a Voty?
 
-    #voty.view
+    #voty.view.hidden
       %button#sidebar-toggle.btn.btn-default
         %i.fa.fa-bars
       #topbar
@@ -32,14 +32,15 @@
           %button.btn.btn-warning#editor Anyone can add options
           %button.btn.btn-warning#editor Can only pick one
           %h3.text-center Show
-          %button.btn.btn-info Ballot
-          %button.btn.btn-default Results
+          %button.btn.btn-info#ballot-button Ballot
+          %button.btn.btn-default#results-button Results
 
       #ballot
         %form#create-option.option
           %input#new-option-text{type: 'text', placeholder: "New Option..."}
           %input.hidden{type: 'submit'}
 
+      #results
 
   / What is Voty?
   #what-is-voty-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}

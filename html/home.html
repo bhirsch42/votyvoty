@@ -14,12 +14,12 @@
     <script src='../js/scripts.js'></script>
   </head>
   <body>
-    <div class='view hidden' id='home'>
+    <div class='view' id='home'>
       <h1>Voty</h1>
       <button class='btn btn-default btn-lg' id='new-voty'>Make a new Voty</button>
       <!-- %a#what-is-voty{'data-toggle' => 'modal', 'data-target' => '#what-is-voty-modal'} What's a Voty? -->
     </div>
-    <div class='view' id='voty'>
+    <div class='view hidden' id='voty'>
       <button class='btn btn-default' id='sidebar-toggle'>
         <i class='fa fa-bars'></i>
       </button>
@@ -33,8 +33,8 @@
           <button class='btn btn-warning' id='editor'>Anyone can add options</button>
           <button class='btn btn-warning' id='editor'>Can only pick one</button>
           <h3 class='text-center'>Show</h3>
-          <button class='btn btn-info'>Ballot</button>
-          <button class='btn btn-default'>Results</button>
+          <button class='btn btn-info' id='ballot-button'>Ballot</button>
+          <button class='btn btn-default' id='results-button'>Results</button>
         </div>
       </div>
       <div id='ballot'>
@@ -43,6 +43,7 @@
           <input class='hidden' type='submit'>
         </form>
       </div>
+      <div id='results'></div>
     </div>
   </body>
   <!-- What is Voty? -->
